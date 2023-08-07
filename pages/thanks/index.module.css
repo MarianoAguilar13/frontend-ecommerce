@@ -1,0 +1,10 @@
+.containerThanks {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: var(--aquaMar);
+}

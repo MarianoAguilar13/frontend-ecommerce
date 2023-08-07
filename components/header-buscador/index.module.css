@@ -1,0 +1,246 @@
+.headerVisible {
+  background-color: var(--wine);
+  display: flex;
+  height: 150px;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+}
+
+@media (max-width: 768px) {
+  .headerVisible {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 240px;
+    width: 100%;
+  }
+}
+
+.headerVisibleDesktop {
+  background-color: var(--wine);
+  display: flex;
+  width: 100%;
+  height: 150px;
+  justify-content: space-between;
+  flex-direction: row;
+  font-family: "Poppins", sans-serif;
+}
+
+@media (max-width: 768px) {
+  .headerVisibleDesktop {
+    height: 100px;
+  }
+}
+
+.headerVisibleLogoContainer {
+  margin-left: 10px;
+  margin-right: 10px;
+  display: flex;
+  height: 100%;
+  width: 180px;
+  align-items: center;
+}
+
+.tituloLogo {
+  margin-left: 20px;
+}
+
+.headerVisibleLogoContainerLogo {
+  color: whitesmoke;
+  max-width: 60px;
+  margin-left: 20px;
+}
+
+@media (max-width: 768px) {
+  .headerVisibleLogoContainerLogo {
+    font-size: 24px;
+  }
+}
+
+.headerLinks {
+  display: flex;
+  height: 100%;
+  margin-right: 20px;
+  width: 255px;
+  text-decoration: none;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.headerCerrarSesionContainer {
+  display: flex;
+  height: 100%;
+  margin-right: 20px;
+  width: 255px;
+  text-decoration: none;
+  align-items: flex-end;
+  align-content: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.linkCerrarSesion {
+  color: var(--verdeLoro);
+}
+
+.linkCerrarSesion:hover {
+  cursor: pointer;
+}
+
+.HeaderFormBuscarMobile {
+  display: flex;
+  height: 140px;
+  width: 340px;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .HeaderFormBuscarMobile {
+    display: none;
+  }
+}
+
+.HeaderFormBuscarDesktop {
+  display: flex;
+  height: 100%;
+  width: 600px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .HeaderFormBuscarDesktop {
+    display: none;
+  }
+}
+
+.ButtonBuscar {
+  margin-left: 20px;
+}
+
+@media (max-width: 768px) {
+  .headerLinks {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .HeaderFormBuscar {
+    display: none;
+  }
+}
+
+.headerLinksLink {
+  font-size: 18px;
+  text-decoration: none;
+  color: whitesmoke;
+  margin-right: 40px;
+  margin-left: 40px;
+}
+
+@media (max-width: 768px) {
+  .headerLinksLink {
+    display: none;
+  }
+}
+
+.headerVisibleBotonDesplegarContainer {
+  display: flex;
+  height: 100%;
+  width: 50%;
+  align-items: center;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding-right: 40px;
+}
+
+@media (min-width: 769px) {
+  .headerVisibleBotonDesplegarContainer {
+    display: none;
+  }
+}
+
+.headerVisibleBotonDesplegar {
+  background-color: whitesmoke;
+  padding: 0;
+}
+
+@media (min-width: 769px) {
+  .headerVisibleBotonDesplegar {
+    display: none;
+  }
+}
+
+.headerVisibleBotonDesplegarBarras {
+  background-color: white;
+  border: solid 2px var(--wine);
+  width: 36px;
+  height: 8px;
+}
+
+.ventanaLinks {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--wine);
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+@media (min-width: 769px) {
+  .ventanaLinks {
+    display: none;
+  }
+}
+
+.ventanaLinksBotonCerrar {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  color: whitesmoke;
+  background-color: var(--wine);
+  border: solid 2px whitesmoke;
+  font-size: 32px;
+  align-self: flex-start;
+}
+
+@media (min-width: 769px) {
+  .ventanaLinksBotonCerrar {
+    position: absolute;
+    display: none;
+  }
+}
+
+.ventanaLinksLink {
+  font-size: 32px;
+  text-decoration: none;
+  color: whitesmoke;
+  cursor: pointer;
+}
+
+.linkUno {
+  text-decoration: none;
+  margin-top: 100px;
+}
+
+.linkDos {
+  text-decoration: none;
+}
+
+.linkTres {
+  text-decoration: none;
+}
+
+.linkCuatro {
+  text-decoration: none;
+  margin-bottom: 100px;
+}

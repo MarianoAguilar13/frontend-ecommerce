@@ -1,0 +1,23 @@
+.containerProducts {
+  display: flex;
+  min-height: 600px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: whitesmoke;
+  background-color: var(--azulino);
+}
+
+.containerProductsCards {
+  display: flex;
+  min-height: 480px;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  column-gap: 40px;
+  flex-wrap: wrap;
+  align-content: space-around;
+  background-color: var(--azulino);
+}

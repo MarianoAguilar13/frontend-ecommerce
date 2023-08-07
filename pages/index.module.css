@@ -1,0 +1,45 @@
+.containerForm {
+  display: flex;
+  height: 400px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.containerFormMedidas {
+  display: flex;
+  height: 300px;
+  width: 300px;
+  justify-content: center;
+  align-items: center;
+}
+
+.containerProductosDestacados {
+  display: flex;
+  min-height: 600px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--azulino);
+}
+
+.containerProductosDestacadosTitle {
+  display: flex;
+  height: 120px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.containerProductosDestacadosCards {
+  display: flex;
+  min-height: 480px;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  column-gap: 40px;
+  flex-wrap: wrap;
+  align-content: space-around;
+}

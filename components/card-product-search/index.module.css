@@ -1,0 +1,58 @@
+.cardContainer {
+  display: flex;
+  height: 420px;
+  width: 360px;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  border: 5px solid var(--wine);
+  border-radius: 10px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.cardContainerImgContainer {
+  display: flex;
+  width: 100%;
+  height: 75%;
+  justify-content: center;
+  align-content: center;
+  background-color: white;
+  border-radius: 5px 5px 0 0;
+}
+
+.cardContainerImgContainerImg {
+  border-radius: 3px 3px 0 0;
+  width: 100%;
+  height: auto;
+}
+
+.cardContainerDataContainer {
+  display: flex;
+  width: 100%;
+  height: 25%;
+  flex-direction: row;
+  justify-content: center;
+  background-color: var(--verdeHierba);
+  border-radius: 0 0 5px 5px;
+  border-top: solid 5px var(--wine);
+}
+
+.cardContainerDataContainerTitle {
+  display: flex;
+  width: 50%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.cardContainerDataContainerPrice {
+  display: flex;
+  width: 50%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}

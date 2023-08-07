@@ -1,0 +1,7 @@
+.formContainer {
+  display: flex;
+  width: 350px;
+  height: 200px;
+  justify-content: space-around;
+  flex-direction: column;
+}
