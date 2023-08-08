@@ -56,7 +56,7 @@ const ProductPage = () => {
   useEffect(() => {
     if (localStorage.getItem("Token")) {
       alert(
-        "Ya tienes uns sesión iniciada en curso, si quieres entrar con otra cuenta, por favor desconectese de la cuenta actual."
+        "Ya tienes una sesión iniciada en curso, si quieres entrar con otra cuenta, por favor desconectese de la cuenta actual."
       );
       push("/");
     }

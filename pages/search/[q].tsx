@@ -4,7 +4,7 @@ import Css from "./index.module.css";
 import { Layout } from "@/components/layout";
 import { Subtitle, SubtitleWine, TextLargeWine } from "@/ui/typography";
 import { CardProductSearch } from "@/components/card-product-search";
-import { useSearch } from "@/hooks/hooks";
+import { searchUse } from "@/hooks/hooks";
 import { ButtonGreen } from "@/ui/buttons";
 import { Spinner } from "@/components/spinner";
 
@@ -22,7 +22,7 @@ const ProductPage = () => {
 
   //funcion para poder usar el async await dentro del useEffect
   async function search(query: string) {
-    const dataProduct = await useSearch(query as string, offset, limit);
+    const dataProduct = await searchUse(query as string, offset, limit);
 
     if (dataProduct) {
       setResults(dataProduct.results);
@@ -49,7 +49,7 @@ const ProductPage = () => {
 
       console.log(offset);
 
-      const dataProduct = await useSearch(query as string, offset + 5, limit);
+      const dataProduct = await searchUse(query as string, offset + 5, limit);
       //lo tengo que poner despues porque como tarda en actualizarse, para el proximo
       //click ya llega a sumar bien
       const newOffset = offset + 5;
