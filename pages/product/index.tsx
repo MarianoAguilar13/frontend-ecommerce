@@ -6,13 +6,13 @@ import { CardProduct } from "@/components/card-product";
 import { productId } from "@/atoms/atoms";
 import { useRouter } from "next/navigation";
 import { useRecoilState } from "recoil";
-import { useCreateOrder, useMe, useProduct } from "@/hooks/hooks";
-import { productData } from "@/atoms/atoms";
+import { productData } from "@/hooks/hooks";
+import { dataProduct } from "@/atoms/atoms";
 import { Spinner } from "@/components/spinner";
 
 const ProductPage = () => {
   const [id, setId] = useRecoilState(productId);
-  const [product, setProduct] = useRecoilState(productData);
+  const [product, setProduct] = useRecoilState(dataProduct);
   const [visible, setVisible] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
@@ -34,7 +34,7 @@ const ProductPage = () => {
 
   useEffect(() => {
     if (id.id) {
-      useProduct(id.id, callbackProduct);
+      productData(id.id, callbackProduct);
     }
     setVisible(false);
   }, []);

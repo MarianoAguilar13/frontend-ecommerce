@@ -7,7 +7,7 @@ export const productId = atom({
   },
 });
 
-export const productData = atom({
+export const dataProduct = atom({
   key: "dataProduct",
   default: {
     key: "",

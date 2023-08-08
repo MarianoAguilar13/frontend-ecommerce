@@ -2,7 +2,7 @@ import Css from "./index.module.css";
 import React from "react";
 import { TextNormal, Subtitle, TextCardProduct } from "@/ui/typography";
 import { ButtonComprar } from "@/ui/buttons";
-import { useCreateOrder, useMe } from "@/hooks/hooks";
+import { createOrder, me } from "@/hooks/hooks";
 import { useRouter } from "next/navigation";
 import { title } from "process";
 
@@ -26,8 +26,8 @@ export const CardProduct = (props: PropsCardProduct) => {
 
       const id = props.id;
 
-      const data = await useMe();
-      const result = await useCreateOrder(
+      const data = await me();
+      const result = await createOrder(
         id,
         data.direccion,
         props.title,

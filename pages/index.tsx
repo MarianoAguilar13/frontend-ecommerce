@@ -5,9 +5,6 @@ import { Footer } from "@/components/footer";
 import { FormBuscadorHome } from "@/components/form-buscador-home";
 import { CardProductSearch } from "@/components/card-product-search";
 import { Subtitle, SubtitleWine } from "@/ui/typography";
-import { useSearch } from "@/hooks/hooks";
-import { useProduct } from "@/hooks/hooks";
-import { useRecoilState } from "recoil";
 import { productId } from "@/atoms/atoms";
 import { useRouter } from "next/navigation";
 

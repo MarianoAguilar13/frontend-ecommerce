@@ -4,7 +4,7 @@ import Css from "./index.module.css";
 import { Layout } from "@/components/layout";
 import { FormSignIn } from "@/components/form-sign-in";
 import { FormCode } from "@/components/form-code";
-import { useAuth, useAuthToken } from "@/hooks/hooks";
+import { auth, authToken } from "@/hooks/hooks";
 import { useRecoilState } from "recoil";
 import { userEmailSesion } from "@/atoms/atoms";
 import { Spinner } from "@/components/spinner";
@@ -24,7 +24,7 @@ const ProductPage = () => {
 
     const email = e.target.email.value;
 
-    const result = await useAuth(email);
+    const result = await auth(email);
 
     if (result) {
       setEmailUser({ email: email });
@@ -41,7 +41,7 @@ const ProductPage = () => {
 
     const code = e.target.code.value;
 
-    const result = await useAuthToken(emailUser.email, code);
+    const result = await authToken(emailUser.email, code);
 
     if (result) {
       localStorage.setItem("Token", result);

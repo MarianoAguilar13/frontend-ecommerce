@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import Css from "./index.module.css";
 import { Layout } from "@/components/layout";
 import { FormProfile } from "@/components/form-profile";
-import { useMeOrders, useProductName } from "@/hooks/hooks";
+import { meOrders, productName } from "@/hooks/hooks";
 import { RowProduct } from "@/components/row-product";
 
 const MyRecord = () => {
@@ -12,15 +12,15 @@ const MyRecord = () => {
 
   //pido los datos del user que tiene el token guardado en el localstorage
   //que es el ususario que inicio sesión
-  const meOrders = async () => {
-    const result = await useMeOrders();
+  const allOrders = async () => {
+    const result = await meOrders();
     return result.orders;
     /*
     if (result) {
       //aca voy a obtener el nombre y el resto de informacion de las ordenes que
       // tengan el status de closed, ya que esas son las que se pagaron
       const arrayOrders = result.orders.map(async (r: any) => {
-        const name = await useProductName(r.productId);
+        const name = await productName(r.productId);
 
         r.name = name;
 
@@ -33,7 +33,7 @@ const MyRecord = () => {
   };
 
   const meOrdersAsync = () => {
-    meOrders()
+    allOrders()
       .then((res) => res)
       .then((result) => {
         console.log("este es el resultado: ", result);

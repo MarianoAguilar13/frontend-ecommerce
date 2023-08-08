@@ -12,7 +12,7 @@ import { Carrito } from "@/ui/icons";
 import { TextWhite } from "@/ui/typography";
 import { useRouter } from "next/navigation";
 import useSWR, { useSWRConfig } from "swr";
-import { useMe } from "@/hooks/hooks";
+import { me } from "@/hooks/hooks";
 
 function HeaderHome() {
   //este state lo utilizo para saber si aprete el boton para cerrar
@@ -23,7 +23,7 @@ function HeaderHome() {
 
   const useUser = () => {
     const { data, error } = useSWR("userData", async (id) => {
-      const res = await useMe();
+      const res = await me();
       const userData = res;
       return userData;
     });

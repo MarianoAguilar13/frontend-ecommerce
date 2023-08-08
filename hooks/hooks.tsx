@@ -12,7 +12,7 @@ import {
 
 const BASE_URL = "https://backend-ecommerce-virid.vercel.app/api/";
 
-export const useSearch = async (
+export const searchUse = async (
   query: string,
   offset: number,
   limit: number
@@ -35,7 +35,7 @@ export const useSearch = async (
   }
 };
 
-export const useProduct = (id: string, callback: any) => {
+export const productData = (id: string, callback: any) => {
   fetch(BASE_URL + "products/" + id, {
     method: "GET",
     headers: {
@@ -58,7 +58,7 @@ export const useProduct = (id: string, callback: any) => {
     });
 };
 
-export const useProductName = async (id: string) => {
+export const productName = async (id: string) => {
   const fetchApi = fetch(BASE_URL + "products/" + id, {
     method: "GET",
     headers: {
@@ -79,7 +79,7 @@ export const useProductName = async (id: string) => {
   }
 };
 
-export const useValidateEmail = (mail: string) => {
+export const validateEmail = (mail: string) => {
   // Define our regular expression.
   var validEmail = /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/;
 
@@ -91,10 +91,10 @@ export const useValidateEmail = (mail: string) => {
   }
 };
 
-export const useAuth = async (email: string) => {
-  const validateEmail = useValidateEmail(email);
+export const auth = async (email: string) => {
+  const emailValidate = validateEmail(email);
 
-  if (validateEmail) {
+  if (emailValidate) {
     const result = await fetchAPIPostAuth("auth", email);
 
     if (result.error) {
@@ -112,7 +112,7 @@ export const useAuth = async (email: string) => {
   }
 };
 
-export const useAuthToken = async (email: string, code: string) => {
+export const authToken = async (email: string, code: string) => {
   const result = await fetchAPIPostAuthToken("auth/token", email, code);
 
   if (result) {
@@ -127,13 +127,13 @@ export const useAuthToken = async (email: string, code: string) => {
   }
 };
 
-export const useMe = async () => {
+export const me = async () => {
   const result = await fetchAPIPostMe("me");
   //result sera un usuario o un null dependiendo de lo que responda el back
   return result;
 };
 
-export const useMeUpdateData = async (
+export const meUpdateData = async (
   name: string,
   direccion: string,
   tel: string
@@ -143,7 +143,7 @@ export const useMeUpdateData = async (
   return result;
 };
 
-export const useCreateOrder = async (
+export const createOrder = async (
   productId: string,
   direccion: string,
   name: string,
@@ -164,7 +164,7 @@ export const useCreateOrder = async (
   }
 };
 
-export const useMeOrders = async () => {
+export const meOrders = async () => {
   const result = await fetchApiMeOrders("me/orders");
 
   if (result.hasOwnProperty("message")) {

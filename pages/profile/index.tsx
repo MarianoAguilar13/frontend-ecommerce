@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import Css from "./index.module.css";
 import { Layout } from "@/components/layout";
 import { FormProfile } from "@/components/form-profile";
-import { useMe, useMeUpdateData } from "@/hooks/hooks";
+import { me, meUpdateData } from "@/hooks/hooks";
 import { Spinner } from "@/components/spinner";
 
 const ProductPage = () => {
@@ -18,7 +18,7 @@ const ProductPage = () => {
   //pido los datos del user que tiene el token guardado en el localstorage
   //que es el ususario que inicio sesión
   const meAsync = async () => {
-    const result = await useMe();
+    const result = await me();
     console.log(result);
 
     const obj = {
@@ -51,7 +51,7 @@ const ProductPage = () => {
     const direccion = e.target.direccion.value;
     const tel = e.target.tel.value;
 
-    const result = await useMeUpdateData(name, direccion, tel);
+    const result = await meUpdateData(name, direccion, tel);
 
     if (result.hasOwnProperty("error")) {
       setIsLoading(false);
