@@ -10,6 +10,7 @@ function Footer() {
   //o abrir la ventana, dependiendo si es true o false
   const [openWindow, setOpenWindow] = useState(false);
   const { push } = useRouter();
+  const URL = "https://ecommerce-one-fawn.vercel.app";
 
   const desplegarVentana = () => {
     setOpenWindow(true);
@@ -32,14 +33,10 @@ function Footer() {
     <div className={Css.footer}>
       <div className={Css.footerNav}>
         <div className={Css.footerNavLinks}>
-          <LinkAFooter href="http://localhost:3000/signin">Login</LinkAFooter>
-          <LinkAFooter href="http://localhost:3000/profile">
-            Mi perfil
-          </LinkAFooter>
-          <LinkAFooter href="http://localhost:3000/my-record">
-            Mi historial
-          </LinkAFooter>
-          <LinkAFooter href="http://localhost:3000/search">Buscar</LinkAFooter>
+          <LinkAFooter href={URL + "/signin"}>Login</LinkAFooter>
+          <LinkAFooter href={URL + "/profile"}>Mi perfil</LinkAFooter>
+          <LinkAFooter href={URL + "/my-record"}>Mi historial</LinkAFooter>
+          <LinkAFooter href={URL + "/search"}>Buscar</LinkAFooter>
           <LinkAFooter onClick={cerrarSesión}>Logout</LinkAFooter>
         </div>
         <div className={Css.footerNavMarca}>

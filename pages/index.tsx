@@ -29,7 +29,7 @@ const Home = () => {
       <div className={Css.containerForm}>
         <div className={Css.containerFormMedidas}>
           <FormBuscadorHome
-            placeholder="Heladera"
+            placeholder="Chair"
             submit={submitHandler}
             title="E-Commerce Buscador"
             nameButton="Buscar"

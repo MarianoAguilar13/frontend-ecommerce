@@ -56,6 +56,11 @@ function HeaderHome() {
     push("/signin");
   };
 
+  const goToHome = (e: any) => {
+    e.preventDefault();
+    push("/");
+  };
+
   useEffect(() => {
     if (localStorage.getItem("Token")) {
       setToken(localStorage.getItem("Token") as string);
@@ -67,7 +72,7 @@ function HeaderHome() {
   return (
     <div className={Css.header}>
       <div className={Css.headerVisible}>
-        <div className={Css.headerVisibleLogoContainer}>
+        <div onClick={goToHome} className={Css.headerVisibleLogoContainer}>
           <Carrito></Carrito>
           <TextWhite className={Css.tituloLogo}>Compralo</TextWhite>
         </div>
