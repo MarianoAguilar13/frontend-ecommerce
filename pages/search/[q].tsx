@@ -43,6 +43,8 @@ const ProductPage = () => {
   const verMas = async (e: any) => {
     e.preventDefault();
 
+    setIsLoading(true);
+
     const query = router.query.q;
     if (offset + 5 < pagination.total) {
       //le sumo 5 mas al offset para traerme mas resultados
@@ -60,6 +62,8 @@ const ProductPage = () => {
         setPagination(dataProduct.pagination);
       }
     }
+
+    setIsLoading(false);
   };
 
   return (

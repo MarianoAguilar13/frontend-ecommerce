@@ -43,3 +43,8 @@
   flex-wrap: wrap;
   align-content: space-around;
 }
+
+.containerVerMasResultados {
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
