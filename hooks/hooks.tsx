@@ -174,3 +174,8 @@ export const meOrders = async () => {
     return result;
   }
 };
+
+export const asyncDb = async () => {
+  const result = await fetchAPIGetNoAuth("sync");
+  console.log(result);
+};

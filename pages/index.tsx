@@ -10,6 +10,7 @@ import { useRouter } from "next/navigation";
 import { searchUse } from "@/hooks/hooks";
 import { ButtonGreen } from "@/ui/buttons";
 import { Spinner } from "@/components/spinner";
+import { asyncDb } from "@/hooks/hooks";
 
 const Home = () => {
   const { push } = useRouter();
@@ -45,7 +46,7 @@ const Home = () => {
 
   useEffect(() => {
     setOffset(0);
-
+    asyncDb();
     search(" ");
   }, []);
 
